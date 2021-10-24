@@ -1,0 +1,33 @@
+apply plugin: 'ams.biz.springServiceModule'
+
+dependencies {
+
+    /**
+     * -=================================================================================-
+     * -======================    spring boot 依赖    ==============================-
+     * -=================================================================================-
+     */
+    compile ('org.springframework.boot:spring-boot-starter-web') {
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+        exclude group: 'ch.qos.logback', module: 'logback-core'
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    compile ('org.springframework:spring-context-indexer') {
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+        exclude group: 'ch.qos.logback', module: 'logback-core'
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    compile ('org.springframework.boot:spring-boot-starter-log4j2')
+    compile 'org.springframework.boot:spring-boot-configuration-processor'
+
+    /**
+     * -=================================================================================-
+     * -======================    disruptor 依赖    ==============================-
+     * -=================================================================================-
+     */
+    compile 'com.lmax:disruptor:3.4.4'
+
+    compile 'org.apache.commons:commons-lang3:3.12.0'
+    compile 'org.apache.commons:commons-collections4:4.4'
+
+}

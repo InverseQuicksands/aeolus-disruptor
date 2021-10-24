@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+
+spring:
+  application:
+    name: aa
+
+
+  disruptor:
+    enabled: true
+    ring-buffer-size: 1024
+    handler-definitions:
+    - order: 1
+      definitions: /Event-DC-Output/TagA-Output/** = inDbPreHandler
+    - order: 3
+      definitions: /Event-DC-Output/TagC-Output/** = emailPostHandler
+
+
+
+
+
+
