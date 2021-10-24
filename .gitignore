@@ -1,1 +1,6 @@
 /disruptor-spring-boot-starter/*.iml
+/disruptor-spring-boot-starter/src/main/java/com/aeolus/disruptor/Bootstrap.java
+/.gradle
+/*.iws
+/*.iml
+/*.ipr
